@@ -1,0 +1,21 @@
+class StarNFT:
+    def __init__(self, owner, name, coordinates):
+        self.owner = owner
+        self.name = name
+        self.coordinates = coordinates
+
+    def transfer_ownership(self, new_owner):
+        self.owner = new_owner
+
+# 创建一个星星 NFT
+star_nft = StarNFT(owner="Alice", name="Sirius", coordinates="(12.34, 56.78)")
+
+# 打印星星 NFT 的初始所有者和名称
+print("Initial Owner:", star_nft.owner)
+print("Star Name:", star_nft.name)
+
+# 将星星 NFT 的所有权转移给 Bob
+star_nft.transfer_ownership(new_owner="Bob")
+
+# 打印星星 NFT 的新所有者
+print("New Owner:", star_nft.owner)
